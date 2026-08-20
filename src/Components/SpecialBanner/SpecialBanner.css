@@ -1,0 +1,507 @@
+.special-banner {
+  --banner-radius: 0px;
+  --badge-width: 72px;
+  --content-gap: 5%;
+  --banner-height: 520px;
+
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: var(--banner-height);
+  margin: 0 auto;
+
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: var(--banner-radius);
+
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.special-banner *,
+.special-banner *::before,
+.special-banner *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   VERTICAL BADGE
+   ========================================================= */
+
+.special-banner__badge {
+  position: absolute;
+  z-index: 5;
+
+  left: 18px;
+  top: 12px;
+  bottom: 0;
+
+  width: var(--badge-width);
+
+  display: flex;
+  flex-direction: column;
+
+  color: #ffffff;
+}
+
+.special-banner__badge-top {
+  position: relative;
+
+  height: 180px;
+
+  background: #000000;
+
+  border-radius: 36px 36px 26px 26px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.special-banner__badge-top::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: -22px;
+  left: 50%;
+
+  width: 38px;
+  height: 38px;
+
+  transform: translateX(-50%) rotate(45deg);
+
+  background: #000000;
+}
+
+/* =========================================================
+   SIMPLE DRESS ICON
+   ========================================================= */
+
+.special-banner__dress-icon {
+  position: relative;
+
+  width: 34px;
+  height: 100px;
+
+  margin-top: 24px;
+}
+
+.dress-icon__head {
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: 15px;
+  height: 22px;
+
+  transform: translateX(-50%);
+
+  border: 1.5px solid #ffffff;
+  border-radius: 7px 7px 6px 6px;
+}
+
+.dress-icon__body {
+  position: absolute;
+
+  top: 20px;
+  left: 50%;
+
+  width: 24px;
+  height: 68px;
+
+  transform: translateX(-50%);
+
+  border: 1.5px solid #ffffff;
+  border-top: 0;
+
+  border-radius: 4px 4px 0 0;
+}
+
+.dress-icon__left-arm,
+.dress-icon__right-arm {
+  position: absolute;
+
+  top: 25px;
+
+  width: 6px;
+  height: 42px;
+
+  border: 1.5px solid #ffffff;
+  border-radius: 4px;
+}
+
+.dress-icon__left-arm {
+  left: 1px;
+  transform: rotate(8deg);
+}
+
+.dress-icon__right-arm {
+  right: 1px;
+  transform: rotate(-8deg);
+}
+
+/* =========================================================
+   BADGE NUMBER
+   ========================================================= */
+
+.special-banner__badge-number {
+  position: relative;
+  z-index: 2;
+
+  height: 230px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #000000;
+
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+/* =========================================================
+   BADGE BOTTOM
+   ========================================================= */
+
+.special-banner__badge-bottom {
+  position: relative;
+
+  height: 92px;
+
+  background: #000000;
+
+  border-radius: 0 0 7px 7px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.special-banner__badge-text {
+  position: absolute;
+
+  top: -4px;
+
+  width: 100px;
+
+  text-align: center;
+
+  font-size: 5px;
+  line-height: 7px;
+  letter-spacing: 0.3px;
+
+  transform: translateY(-100%);
+}
+
+/* =========================================================
+   QR
+   ========================================================= */
+
+.special-banner__qr {
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 70px;
+  height: 70px;
+
+  transform: translate(-50%, 0);
+
+  padding: 5px;
+
+  background: #ffffff;
+
+  border-radius: 3px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.special-banner__qr-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+.special-banner__qr-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(45deg, #000 25%, transparent 25%),
+    linear-gradient(-45deg, #000 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #000 75%),
+    linear-gradient(-45deg, transparent 75%, #000 75%);
+
+  background-size: 12px 12px;
+  background-position: 0 0, 0 6px, 6px -6px, -6px 0;
+
+  color: transparent;
+}
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.special-banner__content {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  padding-left: 145px;
+}
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.special-banner__copy {
+  position: relative;
+  z-index: 3;
+
+  width: 38%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.special-banner__title {
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 0.92;
+  letter-spacing: -1.5px;
+  font-weight: 900;
+
+  color: #000000;
+}
+
+.special-banner__title strong {
+  color: #e52d24;
+  font-weight: 900;
+}
+
+.special-banner__button {
+  margin-top: 26px;
+
+  min-width: 136px;
+  height: 32px;
+
+  padding: 0 18px;
+
+  background: #ffffff;
+  border: 1px solid #777777;
+
+  color: #222222;
+
+  font-family: inherit;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.special-banner__button:hover {
+  background: #000000;
+  border-color: #000000;
+  color: #ffffff;
+}
+
+/* =========================================================
+   REUSABLE IMAGE SLOT
+   ========================================================= */
+
+.special-banner__image-slot {
+  position: absolute;
+
+  right: 1%;
+  top: 0%;
+
+  width: 57%;
+  height: 100%;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /*
+   * This is the important part:
+   *
+   * Every future image is constrained to this exact box.
+   * Its native dimensions cannot change the banner layout.
+   */
+  contain: layout;
+}
+
+.special-banner__image {
+
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.special-banner__image-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f4f4f4;
+
+  color: #999999;
+
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .special-banner {
+    --badge-width: 60px;
+    --banner-height: 450px;
+  }
+
+  .special-banner__badge {
+    left: 12px;
+  }
+
+  .special-banner__content {
+    padding-left: 105px;
+  }
+
+  .special-banner__copy {
+    width: 40%;
+  }
+
+  .special-banner__image-slot {
+    width: 60%;
+    right: 1%;
+    top:1%
+  }
+
+  .special-banner__title {
+    font-size: clamp(27px, 5vw, 42px);
+  }
+
+  .special-banner__badge-top {
+    height: 145px;
+  }
+
+  .special-banner__badge-number {
+    height: 190px;
+  }
+
+  .special-banner__badge-bottom {
+    height: 80px;
+  }
+
+  .special-banner__qr {
+    width: 58px;
+    height: 58px;
+  }
+}
+
+@media (max-width: 650px) {
+  .special-banner {
+    height: auto;
+    min-height: 520px;
+
+    overflow: hidden;
+  }
+
+  .special-banner__content {
+    min-height: 520px;
+
+    padding: 60px 16px 20px 90px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .special-banner__copy {
+    width: 100%;
+  }
+
+  .special-banner__title {
+    font-size: clamp(30px, 10vw, 44px);
+  }
+
+  .special-banner__button {
+    margin-top: 18px;
+  }
+
+  .special-banner__image-slot {
+    position: relative;
+
+    right: auto;
+    top: 10px;
+
+    width: 100%;
+    height: min(390px, 72vw);
+
+    margin-top: 15px;
+  }
+
+  .special-banner__badge {
+    left: 10px;
+    top: 10px;
+  }
+
+  .special-banner__badge-top {
+    height: 135px;
+  }
+
+  .special-banner__badge-number {
+    height: 190px;
+  }
+
+  .special-banner__badge-bottom {
+    height: 75px;
+  }
+
+  .special-banner__qr {
+    width: 54px;
+    height: 54px;
+  }
+}

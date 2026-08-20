@@ -1,0 +1,176 @@
+.promo-banner {
+  --banner-bg: #e8ddef;
+  --banner-bg-light: #f1e9f7;
+  --text-dark: #3a2e42;
+
+  position: relative;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, var(--banner-bg-light), var(--banner-bg));
+  border: 6px solid #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 20px 40px rgba(60, 40, 80, 0.15);
+  padding: 32px 40px;
+  overflow: hidden;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  box-sizing: border-box;
+}
+
+.promo-banner::before,
+.promo-banner::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+}
+
+.promo-banner::before {
+  width: 140px;
+  height: 140px;
+  top: -60px;
+  left: 10%;
+}
+
+.promo-banner::after {
+  width: 100px;
+  height: 100px;
+  bottom: -50px;
+  right: 20%;
+}
+
+.promo-banner__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  color: #2f9e44;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin-bottom: 18px;
+}
+
+.promo-banner__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.promo-banner__text {
+  max-width: 460px;
+}
+
+.promo-banner__title {
+  margin: 0 0 10px;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1.25;
+}
+
+.promo-banner__description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-dark);
+  opacity: 0.75;
+}
+
+.promo-banner__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.promo-banner__buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.promo-banner__btn {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.promo-banner__btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.promo-banner__btn--primary {
+  background: #ffffff;
+  color: var(--text-dark);
+  border: none;
+}
+
+.promo-banner__btn--secondary {
+  background: transparent;
+  color: var(--text-dark);
+  border: 1px solid rgba(58, 46, 66, 0.4);
+}
+
+.promo-banner__social-proof {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.promo-banner__avatars {
+  display: flex;
+}
+
+.promo-banner__avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid var(--banner-bg-light);
+  object-fit: cover;
+  margin-left: -8px;
+}
+
+.promo-banner__avatar:first-child {
+  margin-left: 0;
+}
+
+.promo-banner__rating {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-dark);
+  opacity: 0.85;
+}
+
+@media (max-width: 720px) {
+  .promo-banner {
+    width: calc(100% - 24px);
+    padding: 24px 20px;
+    border-width: 4px;
+    border-radius: 16px;
+  }
+
+  .promo-banner__content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .promo-banner__text,
+  .promo-banner__actions {
+    width: 100%;
+  }
+
+  .promo-banner__buttons {
+    flex-wrap: wrap;
+  }
+}

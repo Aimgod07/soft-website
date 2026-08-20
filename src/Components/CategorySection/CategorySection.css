@@ -1,0 +1,112 @@
+.category-section {
+  width: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
+  max-width: 640px;
+  margin: 0 auto;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.category-section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.category-section__heading {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  color: #14151a;
+}
+
+.category-section__view-all {
+  background: none;
+  border: none;
+  color: #f0994b;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.category-section__view-all:hover {
+  text-decoration: underline;
+}
+
+/* vertical stack — one category per row */
+.category-section__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.category-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 96px;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0 0 0 22px;
+  text-align: left;
+  box-shadow: 0 6px 16px rgba(20, 21, 26, 0.12);
+}
+
+.category-card__name {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.25;
+  max-width: 55%;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.category-card__image-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 62%;
+  overflow: hidden;
+  /* diagonal cut so the photo bleeds in at an angle, like the reference */
+  clip-path: polygon(28% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.category-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.category-card:hover {
+  transform: translateY(-2px);
+  transition: transform 0.15s ease;
+}
+
+@media (max-width: 480px) {
+  .category-section__header {
+    gap: 12px;
+  }
+
+  .category-section__heading {
+    font-size: 20px;
+  }
+
+  .category-card {
+    height: 84px;
+  }
+
+  .category-card__name {
+    font-size: 15px;
+    max-width: 50%;
+  }
+}
