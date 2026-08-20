@@ -1,5 +1,5 @@
 import React from "react";
-import "./PromoBanner.css";
+import "./Promobanner.css";
 
 const AVATARS = [
   "https://randomuser.me/api/portraits/men/32.jpg",
