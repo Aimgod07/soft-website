@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./SearchBar.css";
+import "./Searchbar.css";
 
 export default function SearchBar({
   placeholder = "Search...",
