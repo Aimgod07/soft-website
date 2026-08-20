@@ -2,7 +2,7 @@ import React from "react";
 import "./SpecialBanner.css";
 
 export default function SpecialBanner({
-  imageSrc = "./images/model.png",
+  imageSrc = "/images/model.png",
   imageAlt = "Fashion model",
   qrSrc,
   qrAlt = "Scan QR code",

@@ -22,7 +22,7 @@ const products = [
     name: "Premium Hoodie",
     category: "Hoodies",
     price: "₹2,499",
-    image: "/images/hoodie.avif",
+    image: "/images/sweatshirt.avif",
     badge: "TRENDING",
   },
   {

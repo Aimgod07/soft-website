@@ -24,7 +24,7 @@ const products = [
     description: "Warm & comfortable",
     price: "₹2,499",
     badge: "TRENDING",
-    image: "/images/hoodie.avif",
+    image: "/images/sweatshirt.avif",
   },
   {
     id: 4,
