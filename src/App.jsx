@@ -1,7 +1,7 @@
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
-import Login from './Pages/Login/Login'
-import Home from './Pages/Home/Home.jsx'
-import About from './Pages/About/About.jsx'
+import Login from './Pages/Login/Login.jsx'
+import Home from './Pages/Home/Home.jsx.jsx'
+import About from './Pages/About/About.jsx.jsx'
 import Contact from './Pages/Contact/Contact.jsx'
 
 function App() {
