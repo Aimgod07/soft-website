@@ -2,7 +2,7 @@ import React from "react";
 import "./MainHero.css";
 
 const DEFAULT_HERO_IMAGE = "/images/herogirl.png";
-const DEFAULT_SIDE_IMAGE = "/images/model.png";
+const DEFAULT_SIDE_IMAGE = "/images/texture.png";
 
 export default function Hero({
   heroImage = DEFAULT_HERO_IMAGE,
@@ -23,11 +23,11 @@ export default function Hero({
   ),
   buttonText = "Get started",
   onButtonClick,
-  floatingLabel = "Here",
 }) {
   return (
     <section className="hero">
       <div className="hero-content">
+        {/* LEFT CONTENT */}
         <div className="hero-copy">
           <h1>{title}</h1>
 
@@ -43,6 +43,7 @@ export default function Hero({
           </button>
         </div>
 
+        {/* MAIN HERO IMAGE */}
         <div className="hero-image-wrapper">
           <img
             src={heroImage}
@@ -51,19 +52,17 @@ export default function Hero({
           />
         </div>
 
-        <div className="hero-side-card" aria-label="Featured style note">
-          <div className="hero-side-note">{floatingLabel}</div>
-          <button type="button" className="hero-side-favorite" aria-label="Favorite style">
-            ♥
-          </button>
+        {/* RIGHT IMAGE CARD */}
+        <div className="hero-side-card">
           <img
             src={sideImage}
             alt="Featured collection"
-            className="hero-side-mini-image"
+            className="hero-side-image"
           />
         </div>
       </div>
 
+      {/* Decorative bottom-right element */}
       <div className="hero-decoration" />
     </section>
   );
