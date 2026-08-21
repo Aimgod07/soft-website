@@ -1,9 +1,8 @@
 import React from "react";
 import "./MainHero.css";
-import HeroBadge from "../HeroBadge/HeroBadge.jsx";
 
 const DEFAULT_HERO_IMAGE = "/images/herogirl.png";
-const DEFAULT_SIDE_IMAGE = ""; // we now use HeroBadge which uses its own default image
+const DEFAULT_SIDE_IMAGE = "/images/texture.png";
 
 export default function Hero({
   heroImage = DEFAULT_HERO_IMAGE,
@@ -53,9 +52,13 @@ export default function Hero({
           />
         </div>
 
-        {/* RIGHT IMAGE CARD - replaced with HeroBadge component */}
+        {/* RIGHT IMAGE CARD */}
         <div className="hero-side-card">
-          <HeroBadge image={sideImage} />
+          <img
+            src={sideImage}
+            alt="Featured collection"
+            className="hero-side-image"
+          />
         </div>
       </div>
 
