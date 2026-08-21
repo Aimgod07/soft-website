@@ -292,8 +292,24 @@
     height: 51%;
   }
 
+  /* Show the right badge on mobile with a smaller footprint */
   .hero-side-card {
-    display: none;
+    display: block;
+    position: absolute;
+    top: 12%;
+    right: 6%;
+
+    width: 30%;
+    height: 36%;
+    padding: 8px;
+    background: transparent;
+    z-index: 4;
+  }
+
+  .hero-side-card .hero-badge {
+    width: 100%;
+    height: 100%;
+    gap: 8px;
   }
 
   .hero-decoration {
